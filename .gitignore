@@ -1,0 +1,57 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments / Conda ---
+venv/
+env/
+ragt_env/
+venv_old/
+.venv_old/
+.venv/
+.ragt_env/
+*.conda
+
+# --- Third-party / embedded repos ---
+pythonocc-utils/
+
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Generated dataset outputs (large/derived — regenerable from source CAD) ---
+mfpp_dataset/mfpp_output/aag_states/
+*.json.bak
+
+# --- Generated old dataset outputs and scripts (large/derived — regenerable from source CAD) ---
+mfpp_dataset_old/
+
+# --- SLURM / HPC ---
+slurm-*.out
+*.out
+*.err
+core.*
+
+# --- Local Old results ---
+runs/
+
+# --- Logs ---
+*.log
+
+# --- VS Code ---
+.vscode/
+
+# --- OS-generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Misc ---
+*.tmp
+*.bak
+.cache/

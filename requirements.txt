@@ -1,0 +1,7 @@
+dataclasses
+pathlib
+typing
+argparse
+numpy
+# This  is for the gpuidle partition which has a cuda version of 13.0
+torch --index-url https://download.pytorch.org/whl/cu130  
