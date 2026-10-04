@@ -134,9 +134,11 @@ def collect_batch(model, parts: List[AAGPart], cfg: AAGConfig, device="cpu", max
 
 def ppo_update_from_batch(model, optimizer, batch: dict, clip_eps=0.2,
                            n_epochs=10, value_coef=0.5, entropy_coef=0.01):
-    old_logprobs = torch.stack(batch["logprobs"])
-    actions = torch.tensor(batch["actions"], dtype=torch.long)
-    advantages, returns = batch["advantages"], batch["returns"]
+    device = next(model.parameters()).device
+    old_logprobs = torch.stack(batch["logprobs"]).to(device)
+    actions = torch.tensor(batch["actions"], dtype=torch.long, device=device)
+    advantages = batch["advantages"].to(device)
+    returns = batch["returns"].to(device)
     states = batch["states"]
 
     for _ in range(n_epochs):

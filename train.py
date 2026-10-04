@@ -61,12 +61,23 @@ def main():
     ap.add_argument("--n_heads", type=int, default=4)
     ap.add_argument("--n_layers", type=int, default=3)
     ap.add_argument("--d_ff", type=int, default=256)
+    ap.add_argument("--device", type=str, default="cpu",
+                     help="'cpu' or 'cuda'. If 'cuda' is requested but unavailable the "
+                          "script ABORTS instead of silently falling back to CPU.")
     ap.add_argument("--out_dir", type=str, default="./ragt_ppo_run",
                      help="Directory to write checkpoints/logs/schedules to "
                           "(created relative to wherever you run this script)")
     args = ap.parse_args()
 
     set_seed(args.seed)
+    device = args.device
+    if device.startswith("cuda"):
+        if not torch.cuda.is_available():
+            raise SystemExit("error: --device cuda requested but torch.cuda.is_available() is False "
+                             "(no GPU allocated, or torch build/driver mismatch)")
+        print(f"Device: {device} ({torch.cuda.get_device_name(0)})")
+    else:
+        print(f"Device: {device}")
     os.makedirs(args.out_dir, exist_ok=True)
     os.makedirs(os.path.join(args.out_dir, "schedules"), exist_ok=True)
 
@@ -89,7 +100,7 @@ def main():
 
     # ---- 2. Build model + optimizer ---------------------------------------
     model = RAGT_PPO(cfg, d_model=args.d_model, n_heads=args.n_heads,
-                      n_layers=args.n_layers, d_ff=args.d_ff)
+                      n_layers=args.n_layers, d_ff=args.d_ff).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 
     # ---- 3. Train with periodic validation + best-checkpoint tracking -----
@@ -100,7 +111,7 @@ def main():
 
     for update in range(1, args.n_updates + 1):
         batch_parts = random.sample(train_parts, k=min(args.batch_size, len(train_parts)))
-        batch, ep_stats = collect_batch(model, batch_parts, cfg)
+        batch, ep_stats = collect_batch(model, batch_parts, cfg, device=device)
         stats = ppo_update_from_batch(model, optimizer, batch,
                                        n_epochs=args.epochs_per_update,
                                        entropy_coef=args.entropy_coef)
@@ -119,7 +130,7 @@ def main():
                f"lead_time={train_lead_time:.3f} completion={train_completion:.0%}")
 
         if update % args.val_every == 0 or update == args.n_updates:
-            val_metrics = evaluate(model, val_parts, cfg)
+            val_metrics = evaluate(model, val_parts, cfg, device=device)
             log_rows.append(dict(update=update, split="val",
                                   avg_return=val_metrics["avg_return"],
                                   avg_lead_time=val_metrics["avg_lead_time"],
@@ -146,14 +157,14 @@ def main():
 
     # ---- 4. Final test-set evaluation with the BEST checkpoint -----------
     if os.path.exists(best_ckpt_path):
-        model.load_state_dict(torch.load(best_ckpt_path))
+        model.load_state_dict(torch.load(best_ckpt_path, map_location=device))
         print(f"\nLoaded best checkpoint (val lead_time={best_val_lead_time:.3f}) for testing.")
     else:
         print("\nNo checkpoint passed the completion-rate bar; testing with final weights.")
 
     test_rows = []
     for i, part in enumerate(test_parts):
-        buf, env = collect_episode(model, part, cfg, greedy=True)
+        buf, env = collect_episode(model, part, cfg, device=device, greedy=True)
         from ragt_ppo.ppo import episode_lead_time
         lead_time = episode_lead_time(buf)
         fully_machined = env.rules.all_fully_machined()

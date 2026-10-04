@@ -62,23 +62,24 @@ class MachiningSequencingEnv:
     def get_state(self) -> dict:
         """Packs everything the RAGT-PPO network needs, as torch tensors."""
         n_t, n_c = self.cfg.n_t, self.cfg.n_c
+        dev = self.device
         static = torch.tensor(
-            self.part.feasibility.reshape(self.n, n_t * n_c), dtype=torch.float32
+            self.part.feasibility.reshape(self.n, n_t * n_c), dtype=torch.float32, device=dev
         )
         dyn = torch.tensor(
-            np.stack([d.as_vector() for d in self.rules.dyn]), dtype=torch.float32
+            np.stack([d.as_vector() for d in self.rules.dyn]), dtype=torch.float32, device=dev
         )
-        distance = torch.tensor(self.part.distance, dtype=torch.float32)
+        distance = torch.tensor(self.part.distance, dtype=torch.float32, device=dev)
         if len(self.part.edges) > 0:
             src = [e[0] for e in self.part.edges]
             dst = [e[1] for e in self.part.edges]
             attrs = [e[2] for e in self.part.edges]
-            edge_index = torch.tensor([src, dst], dtype=torch.long)
-            edge_attr = torch.tensor(attrs, dtype=torch.float32)
+            edge_index = torch.tensor([src, dst], dtype=torch.long, device=dev)
+            edge_attr = torch.tensor(attrs, dtype=torch.float32, device=dev)
         else:
-            edge_index = torch.zeros((2, 0), dtype=torch.long)
-            edge_attr = torch.zeros((0, self.cfg.n_edge_types), dtype=torch.float32)
-        mask = torch.tensor(self.rules.build_mask(), dtype=torch.bool)
+            edge_index = torch.zeros((2, 0), dtype=torch.long, device=dev)
+            edge_attr = torch.zeros((0, self.cfg.n_edge_types), dtype=torch.float32, device=dev)
+        mask = torch.tensor(self.rules.build_mask(), dtype=torch.bool, device=dev)
         return dict(static=static, dyn=dyn, distance=distance,
                     edge_index=edge_index, edge_attr=edge_attr,
                     mask=mask.reshape(self.n * n_t * n_c))
