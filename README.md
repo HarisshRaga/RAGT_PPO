@@ -113,6 +113,39 @@ run the script -- override it if you want output somewhere specific.
 Outputs: `best_model.pt`, `training_log.csv`, `test_report.csv`,
 `schedules/test_part_XX.csv`.
 
+### Optional: Monte Carlo Tree Search at test time (`--use_mcts`)
+
+`ragt_ppo/mcts.py` implements the paper's second application method
+(Sec. 3.2.6, Fig. 9-10): at every decision a fresh search tree is grown
+using the trained policy (priors, expansion pruning at
+`p_e = (p_max+p_min)/2`, rollouts) and value head (`V(s)` in
+`Score = (V + gamma*R)/(1+gamma)`), and the most-visited root action is
+executed. Training and validation are unchanged. MCTS runs only on the
+test set, next to the plain greedy policy, so both appear in
+`test_report.csv` (`lead_time` vs `mcts_lead_time`, plus compute times, as
+in the paper's Table 5) and in `schedules/test_part_XX[_mcts].csv`.
+
+```bash
+python3 train.py ... --use_mcts --mcts_iterations 50 --mcts_max_parts 50
+# test an existing model with MCTS, without retraining (same split flags!):
+python3 train.py --data_dir ... --n_train ... --n_val ... --n_test ... \
+                  --eval_checkpoint ./runs/x/best_model.pt --use_mcts --out_dir ./runs/x_mcts
+```
+
+Defaults differ from the paper in two places, both switchable:
+- `--mcts_selection puct` (default) vs `paper`: the literal Eq. 7 (summed
+  `Q(s,a)/Q(s)` + `C*P/(1+N)`) never explores, because the first visited
+  child gets share ~1 and the exploration term only shrinks, so it
+  reproduces the greedy policy exactly. `puct` uses mean Q, min-max
+  normalized to [0,1] among siblings, plus Silver et al.'s `sqrt(N(s))`.
+- `--mcts_rollout greedy` (default) vs `sample`: sampled rollouts are
+  much noisier than the greedy trajectory unless the policy is sharply
+  peaked.
+
+MCTS costs roughly `iterations x sim_depth` network calls per machining
+operation, versus 1 for greedy (seconds to minutes per part). Use
+`--mcts_max_parts` to limit it on large test sets.
+
 ### A note on `--entropy_coef`
 
 In testing against a real part, the agent regularly got to within 1-2

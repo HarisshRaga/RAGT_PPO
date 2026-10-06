@@ -42,6 +42,17 @@ class FeatureDynamicState:
         self.fully_machined = False
         self.rough_tool = -1                                        # rule 5 memory
 
+    def clone(self) -> "FeatureDynamicState":
+        c = FeatureDynamicState.__new__(FeatureDynamicState)
+        c.cfg = self.cfg
+        c.msc_applied = self.msc_applied.copy()
+        c.msc_prev = self.msc_prev.copy()
+        c.tool_prev = self.tool_prev.copy()
+        c.machined_prev = self.machined_prev
+        c.fully_machined = self.fully_machined
+        c.rough_tool = self.rough_tool
+        return c
+
     def as_vector(self) -> np.ndarray:
         return np.concatenate([
             self.msc_applied, self.msc_prev, self.tool_prev,
@@ -62,6 +73,16 @@ class RuleEngine:
         self.datum_prereqs = part.datum_prereqs()
         self._rough_msc_ids = {m for m in range(cfg.n_c)
                                 if cfg.chain_of[m] == "milling" and cfg.stage_of[m] == 0}
+
+    def clone(self) -> "RuleEngine":
+        """Copy of the dynamic state only; part/cfg/static prerequisites are
+        shared (they never change during an episode). Used by MCTS."""
+        c = RuleEngine.__new__(RuleEngine)
+        c.part, c.cfg, c.n = self.part, self.cfg, self.n
+        c.dyn = [d.clone() for d in self.dyn]
+        c.datum_prereqs = self.datum_prereqs
+        c._rough_msc_ids = self._rough_msc_ids
+        return c
 
     # ---- helpers -----------------------------------------------------
     def _stage_cleared_for_msc(self, f: int, m: int) -> bool:

@@ -59,6 +59,18 @@ class MachiningSequencingEnv:
         return self.get_state()
 
     # ------------------------------------------------------------------
+    def clone(self) -> "MachiningSequencingEnv":
+        """Independent copy of the current episode state (for MCTS look-ahead);
+        the part and config are shared, not copied."""
+        c = MachiningSequencingEnv.__new__(MachiningSequencingEnv)
+        c.part, c.cfg, c.n, c.device = self.part, self.cfg, self.n, self.device
+        c.rules = self.rules.clone()
+        c.prev_feature, c.prev_tool, c.prev_method = self.prev_feature, self.prev_tool, self.prev_method
+        c.consecutive_invalid = self.consecutive_invalid
+        c.log = list(self.log)
+        return c
+
+    # ------------------------------------------------------------------
     def get_state(self) -> dict:
         """Packs everything the RAGT-PPO network needs, as torch tensors."""
         n_t, n_c = self.cfg.n_t, self.cfg.n_c
