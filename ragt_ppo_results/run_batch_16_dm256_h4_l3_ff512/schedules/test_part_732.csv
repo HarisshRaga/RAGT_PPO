@@ -1,0 +1,34 @@
+No.,Associate machining feature,Cutting tool,Machining stage,Machining region,Machining method
+1,F3 (triangular_blind_step),End Mill D8 R3,Roughing,-,3-axis milling
+2,F3 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling
+3,F3 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling
+4,F3 (triangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling
+5,F3 (triangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling
+6,F3 (triangular_blind_step),End Mill D8 R1,Finishing,Corners,3-axis milling
+7,F1 (6sides_pocket),End Mill D20 R3,Roughing,-,3-axis milling
+8,F1 (6sides_pocket),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling
+9,F1 (6sides_pocket),End Mill D8 R1,Semi-finishing,Sides,3-axis milling
+10,F1 (6sides_pocket),End Mill D8 R1,Finishing,Sides,3-axis milling
+11,F1 (6sides_pocket),End Mill D8 R1,Finishing,Corners,3-axis milling
+12,F1 (6sides_pocket),End Mill D8 R1,Finishing,Bottom,3-axis milling
+13,F4 (h_circular_end_blind_slot),End Mill D10 R1,Roughing,-,3-axis milling
+14,F4 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling
+15,F4 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling
+16,F4 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling
+17,F4 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling
+18,F5 (blind_hole),Drill D6,Drilling,-,3-axis milling
+19,F5 (blind_hole),Reamer D6,Reaming,-,3-axis milling
+20,F5 (blind_hole),Tap M6,Tapping,-,3-axis milling
+21,F5 (blind_hole),Chamfer Mill D4,Chamfering,-,3-axis milling
+22,F6 (triangular_through_slot),End Mill D10 R1,Roughing,-,3-axis milling
+23,F6 (triangular_through_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling
+24,F6 (triangular_through_slot),End Mill D8 R1,Finishing,Corners,3-axis milling
+25,F6 (triangular_through_slot),End Mill D8 R1,Finishing,Sides,3-axis milling
+26,F7 (h_circular_end_blind_slot),End Mill D10 R1,Roughing,-,3-axis milling
+27,F7 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling
+28,F7 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling
+29,F7 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling
+30,F7 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling
+31,F2 (blind_hole),Drill D12,Drilling,-,3-axis milling
+32,F2 (blind_hole),Reamer D12,Reaming,-,3-axis milling
+33,F2 (blind_hole),Tap M12,Tapping,-,3-axis milling

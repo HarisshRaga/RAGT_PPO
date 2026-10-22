@@ -67,8 +67,16 @@ def _load_one_real_schema(d: dict) -> Tuple[AAGPart, AAGConfig]:
             f"F{i+1} ({fref.get(str(i), {}).get('feature_type', '?')})" for i in range(n)
         ]
 
+    # per-feature tool approach direction (static_attributes.tool_approach_direction.values),
+    # used by reward.py's approach-direction change cost
+    tad = None
+    tad_vals = d["static_attributes"].get("tool_approach_direction", {}).get("values")
+    if tad_vals:
+        tad = np.array([tad_vals[str(i)] for i in range(n)], dtype=np.float32)
+
     part = AAGPart(n_features=n, feasibility=feasibility, distance=distance,
-                    edges=edges, feature_names=feature_names)
+                    edges=edges, feature_names=feature_names,
+                    tool_approach_direction=tad)
     return part, cfg
 
 

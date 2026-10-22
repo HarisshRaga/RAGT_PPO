@@ -26,7 +26,7 @@ gracefully instead of crashing.
 """
 from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional
 import numpy as np
 
 EDGE_TYPES = ["dependence", "adjacency", "datum"]   # matches relation_vocabulary in your JSON
@@ -142,6 +142,8 @@ class AAGPart:
     distance: np.ndarray             # (n, n) normalized Euclidean distance matrix M
     edges: List[Tuple[int, int, Tuple[int, int, int]]]  # (src, dst, (dep,adj,datum) bits)
     feature_names: List[str] = field(default_factory=list)
+    tool_approach_direction: Optional[np.ndarray] = None  # (n, 3) unit vectors; None if
+                                                           # the source file has none
 
     def datum_prereqs(self) -> List[List[int]]:
         """For each feature j, list of feature indices i that are its datum
