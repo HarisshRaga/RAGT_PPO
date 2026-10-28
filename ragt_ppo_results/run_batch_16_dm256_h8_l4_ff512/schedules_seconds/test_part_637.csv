@@ -1,0 +1,27 @@
+No.,Associate machining feature,Cutting tool,Machining stage,Machining region,Machining method,Cutting time (s),Travel time (s),Tool change time (s),Orientation change time (s),Method change time (s),Non-cutting time (s),Total time (s),Cumulative time (s)
+1,F4 (rectangular_through_step),End Mill D18 R1,Roughing,-,3-axis milling,9.906,0.0,0.0,0.0,0.0,0.0,9.906,9.906
+2,F4 (rectangular_through_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,19.813,0.0,30.0,0.0,0.0,30.0,49.813,59.719
+3,F4 (rectangular_through_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,4.412,0.0,0.0,0.0,0.0,0.0,4.412,64.131
+4,F4 (rectangular_through_step),End Mill D8 R1,Finishing,Sides,3-axis milling,4.412,0.0,0.0,0.0,0.0,0.0,4.412,68.542
+5,F4 (rectangular_through_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,49.532,0.0,0.0,0.0,0.0,0.0,49.532,118.074
+6,F6 (6sides_passage),End Mill D8 R3,Roughing,-,3-axis milling,0.544,0.055,30.0,0.0,0.0,30.055,30.599,148.673
+7,F6 (6sides_passage),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,0.871,0.0,30.0,0.0,0.0,30.0,30.871,179.544
+8,F6 (6sides_passage),End Mill D8 R1,Finishing,Corners,3-axis milling,0.302,0.0,0.0,0.0,0.0,0.0,0.302,179.845
+9,F6 (6sides_passage),End Mill D8 R1,Finishing,Sides,3-axis milling,0.871,0.0,0.0,0.0,0.0,0.0,0.871,180.716
+10,F1 (rectangular_blind_step),End Mill D8 R3,Roughing,-,3-axis milling,5.095,0.093,30.0,120.0,0.0,150.093,155.188,335.904
+11,F1 (rectangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,10.19,0.0,30.0,0.0,0.0,30.0,40.19,376.094
+12,F1 (rectangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.863,0.0,0.0,0.0,0.0,0.0,2.863,378.957
+13,F1 (rectangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,2.863,0.0,0.0,0.0,0.0,0.0,2.863,381.821
+14,F1 (rectangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,25.476,0.0,0.0,0.0,0.0,0.0,25.476,407.296
+15,F3 (2sides_through_step),End Mill D8 R3,Roughing,-,3-axis milling,3.484,0.114,30.0,0.0,0.0,30.114,33.598,440.894
+16,F3 (2sides_through_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,6.969,0.0,30.0,0.0,0.0,30.0,36.969,477.863
+17,F3 (2sides_through_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,0.59,0.0,0.0,0.0,0.0,0.0,0.59,478.453
+18,F3 (2sides_through_step),End Mill D8 R1,Finishing,Sides,3-axis milling,0.59,0.0,0.0,0.0,0.0,0.0,0.59,479.042
+19,F3 (2sides_through_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,17.422,0.0,0.0,0.0,0.0,0.0,17.422,496.464
+20,F2 (blind_hole),Drill D6,Drilling,-,3-axis milling,0.399,0.048,30.0,120.0,0.0,150.048,150.446,646.91
+21,F2 (blind_hole),Reamer D6,Reaming,-,3-axis milling,0.499,0.0,30.0,0.0,0.0,30.0,30.499,677.409
+22,F2 (blind_hole),Tap M6,Tapping,-,3-axis milling,3.989,0.0,30.0,0.0,0.0,30.0,33.989,711.398
+23,F2 (blind_hole),Chamfer Mill D4,Chamfering,-,3-axis milling,0.178,0.0,30.0,0.0,0.0,30.0,30.178,741.576
+24,F5 (blind_hole),Drill D10,Drilling,-,3-axis milling,1.159,0.084,30.0,0.0,0.0,30.084,31.243,772.819
+25,F5 (blind_hole),Reamer D10,Reaming,-,3-axis milling,1.449,0.0,30.0,0.0,0.0,30.0,31.449,804.268
+26,F5 (blind_hole),Tap M10,Tapping,-,3-axis milling,11.589,0.0,30.0,0.0,0.0,30.0,41.589,845.856

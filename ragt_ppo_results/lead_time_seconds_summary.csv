@@ -1,0 +1,8 @@
+run,n_test,replay_mismatches,completion_rate,avg_lead_time_norm,avg_lead_time_s,avg_cutting_time_s,avg_non_cutting_time_s,avg_gt_lead_time_s,avg_baseline_lead_time_s,avg_mcts_lead_time_s,n_mcts
+run_batch_16,1000,0,1.0,9.107,965.739,152.634,813.105,666.662,2379.311,,
+run_batch_16_dm128_h8_l3_ff256,1000,0,1.0,9.109,968.018,152.634,815.385,666.662,2379.311,,
+run_batch_16_dm256_h4_l3_ff512,1000,0,1.0,9.234,969.595,152.634,816.961,666.662,2379.311,,
+run_batch_16_dm256_h8_l4_ff512,1000,0,1.0,9.438,981.053,152.634,828.419,666.662,2379.311,,
+run_batch_8_dm128_h8_l3_ff256,1000,0,1.0,9.352,969.252,152.634,816.618,666.662,2379.311,,
+run_results_mcts,1000,1026,1.0,9.297,979.682,152.654,827.028,666.662,2379.311,951.493,50
+run_results_og,1000,977,1.0,9.297,979.682,152.654,827.028,666.662,2379.311,,

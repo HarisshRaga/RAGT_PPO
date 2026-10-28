@@ -1,0 +1,34 @@
+No.,Associate machining feature,Cutting tool,Machining stage,Machining region,Machining method,Cutting time (s),Travel time (s),Tool change time (s),Orientation change time (s),Method change time (s),Non-cutting time (s),Total time (s),Cumulative time (s)
+1,F3 (rectangular_pocket),End Mill D12 R3,Roughing,-,3-axis milling,5.992,0.0,0.0,0.0,0.0,0.0,5.992,5.992
+2,F3 (rectangular_pocket),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,11.983,0.0,30.0,0.0,0.0,30.0,41.983,47.975
+3,F3 (rectangular_pocket),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,3.111,0.0,0.0,0.0,0.0,0.0,3.111,51.086
+4,F3 (rectangular_pocket),End Mill D8 R1,Finishing,Sides,3-axis milling,3.111,0.0,0.0,0.0,0.0,0.0,3.111,54.197
+5,F3 (rectangular_pocket),End Mill D8 R1,Finishing,Corners,3-axis milling,0.201,0.0,0.0,0.0,0.0,0.0,0.201,54.398
+6,F3 (rectangular_pocket),End Mill D8 R1,Finishing,Bottom,3-axis milling,29.958,0.0,0.0,0.0,0.0,0.0,29.958,84.357
+7,F1 (h_circular_end_blind_slot),End Mill D8 R3,Roughing,-,3-axis milling,4.734,0.075,30.0,0.0,0.0,30.075,34.809,119.165
+8,F1 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,9.467,0.0,30.0,0.0,0.0,30.0,39.467,158.633
+9,F1 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.446,0.0,0.0,0.0,0.0,0.0,2.446,161.079
+10,F1 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling,2.446,0.0,0.0,0.0,0.0,0.0,2.446,163.525
+11,F1 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling,23.668,0.0,0.0,0.0,0.0,0.0,23.668,187.193
+12,F2 (rectangular_through_step),End Mill D12 R3,Roughing,-,3-axis milling,11.062,0.109,30.0,120.0,0.0,150.109,161.171,348.364
+13,F2 (rectangular_through_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,22.124,0.0,30.0,0.0,0.0,30.0,52.124,400.488
+14,F2 (rectangular_through_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,4.68,0.0,0.0,0.0,0.0,0.0,4.68,405.168
+15,F2 (rectangular_through_step),End Mill D8 R1,Finishing,Sides,3-axis milling,4.68,0.0,0.0,0.0,0.0,0.0,4.68,409.848
+16,F2 (rectangular_through_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,55.31,0.0,0.0,0.0,0.0,0.0,55.31,465.158
+17,F6 (h_circular_end_blind_slot),End Mill D8 R3,Roughing,-,3-axis milling,3.951,0.116,30.0,0.0,0.0,30.116,34.067,499.225
+18,F6 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,7.902,0.0,30.0,0.0,0.0,30.0,37.902,537.126
+19,F6 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.312,0.0,0.0,0.0,0.0,0.0,2.312,539.439
+20,F6 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling,2.312,0.0,0.0,0.0,0.0,0.0,2.312,541.751
+21,F6 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling,19.754,0.0,0.0,0.0,0.0,0.0,19.754,561.505
+22,F4 (circular_end_pocket),End Mill D8 R3,Roughing,-,3-axis milling,1.798,0.078,30.0,0.0,0.0,30.078,31.876,593.381
+23,F4 (circular_end_pocket),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,3.595,0.0,30.0,0.0,0.0,30.0,33.595,626.976
+24,F4 (circular_end_pocket),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,1.529,0.0,0.0,0.0,0.0,0.0,1.529,628.505
+25,F4 (circular_end_pocket),End Mill D8 R1,Finishing,Sides,3-axis milling,1.529,0.0,0.0,0.0,0.0,0.0,1.529,630.034
+26,F4 (circular_end_pocket),End Mill D8 R1,Finishing,Bottom,3-axis milling,8.988,0.0,0.0,0.0,0.0,0.0,8.988,639.022
+27,F7 (blind_hole),Drill D8,Drilling,-,3-axis milling,0.843,0.095,30.0,0.0,0.0,30.095,30.938,669.96
+28,F7 (blind_hole),Reamer D8,Reaming,-,3-axis milling,1.053,0.0,30.0,0.0,0.0,30.0,31.053,701.013
+29,F7 (blind_hole),Tap M8,Tapping,-,3-axis milling,8.428,0.0,30.0,0.0,0.0,30.0,38.428,739.441
+30,F7 (blind_hole),Chamfer Mill D4,Chamfering,-,3-axis milling,0.237,0.0,30.0,0.0,0.0,30.0,30.237,769.678
+31,F5 (through_hole),Drill D8,Drilling,-,3-axis milling,1.084,0.052,30.0,120.0,0.0,150.052,151.136,920.814
+32,F5 (through_hole),Reamer D8,Reaming,-,3-axis milling,1.355,0.0,30.0,0.0,0.0,30.0,31.355,952.169
+33,F5 (through_hole),Tap M8,Tapping,-,3-axis milling,10.837,0.0,30.0,0.0,0.0,30.0,40.837,993.005

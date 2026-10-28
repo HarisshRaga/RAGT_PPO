@@ -1,0 +1,36 @@
+No.,Associate machining feature,Cutting tool,Machining stage,Machining region,Machining method,Cutting time (s),Travel time (s),Tool change time (s),Orientation change time (s),Method change time (s),Non-cutting time (s),Total time (s),Cumulative time (s)
+1,F3 (rectangular_through_step),End Mill D10 R1,Roughing,-,3-axis milling,9.443,0.0,0.0,0.0,0.0,0.0,9.443,9.443
+2,F3 (rectangular_through_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,4.468,0.0,30.0,0.0,0.0,30.0,34.468,43.91
+3,F3 (rectangular_through_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,18.885,0.0,0.0,0.0,0.0,0.0,18.885,62.795
+4,F3 (rectangular_through_step),End Mill D8 R1,Finishing,Sides,3-axis milling,4.468,0.0,0.0,0.0,0.0,0.0,4.468,67.263
+5,F3 (rectangular_through_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,47.213,0.0,0.0,0.0,0.0,0.0,47.213,114.476
+6,F4 (blind_hole),Drill D6,Drilling,-,3-axis milling,0.532,0.06,30.0,0.0,0.0,30.06,30.592,145.068
+7,F4 (blind_hole),Reamer D6,Reaming,-,3-axis milling,0.665,0.0,30.0,0.0,0.0,30.0,30.665,175.732
+8,F4 (blind_hole),Tap M6,Tapping,-,3-axis milling,5.317,0.0,30.0,0.0,0.0,30.0,35.317,211.05
+9,F1 (triangular_blind_step),End Mill D10 R1,Roughing,-,3-axis milling,1.89,0.098,30.0,120.0,0.0,150.098,151.989,363.038
+10,F1 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.112,0.0,30.0,0.0,0.0,30.0,32.112,395.15
+11,F1 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,3.781,0.0,0.0,0.0,0.0,0.0,3.781,398.931
+12,F1 (triangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,2.112,0.0,0.0,0.0,0.0,0.0,2.112,401.043
+13,F1 (triangular_blind_step),End Mill D8 R1,Finishing,Corners,3-axis milling,0.05,0.0,0.0,0.0,0.0,0.0,0.05,401.094
+14,F1 (triangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,9.451,0.0,0.0,0.0,0.0,0.0,9.451,410.545
+15,F5 (through_hole),Drill D10,Drilling,-,3-axis milling,1.616,0.084,30.0,120.0,0.0,150.084,151.7,562.245
+16,F5 (through_hole),Reamer D10,Reaming,-,3-axis milling,2.019,0.0,30.0,0.0,0.0,30.0,32.019,594.264
+17,F5 (through_hole),Tap M10,Tapping,-,3-axis milling,16.156,0.0,30.0,0.0,0.0,30.0,46.156,640.42
+18,F9 (through_hole),Drill D12,Drilling,-,3-axis milling,1.939,0.037,30.0,0.0,0.0,30.037,31.976,672.396
+19,F9 (through_hole),Reamer D12,Reaming,-,3-axis milling,2.423,0.0,30.0,0.0,0.0,30.0,32.423,704.819
+20,F9 (through_hole),Tap M12,Tapping,-,3-axis milling,19.387,0.0,30.0,0.0,0.0,30.0,49.387,754.206
+21,F8 (blind_hole),Drill D10,Drilling,-,3-axis milling,0.948,0.07,30.0,0.0,0.0,30.07,31.018,785.224
+22,F8 (blind_hole),Reamer D10,Reaming,-,3-axis milling,1.185,0.0,30.0,0.0,0.0,30.0,31.185,816.409
+23,F8 (blind_hole),Tap M10,Tapping,-,3-axis milling,9.478,0.0,30.0,0.0,0.0,30.0,39.478,855.886
+24,F6 (through_hole),Drill D10,Drilling,-,3-axis milling,1.175,0.032,30.0,0.0,0.0,30.032,31.206,887.093
+25,F6 (through_hole),Reamer D10,Reaming,-,3-axis milling,1.468,0.0,30.0,0.0,0.0,30.0,31.468,918.561
+26,F6 (through_hole),Tap M10,Tapping,-,3-axis milling,11.746,0.0,30.0,0.0,0.0,30.0,41.746,960.306
+27,F2 (through_hole),Drill D6,Drilling,-,3-axis milling,0.969,0.095,30.0,0.0,0.0,30.095,31.064,991.37
+28,F2 (through_hole),Reamer D6,Reaming,-,3-axis milling,1.212,0.0,30.0,0.0,0.0,30.0,31.212,1022.582
+29,F2 (through_hole),Tap M6,Tapping,-,3-axis milling,9.693,0.0,30.0,0.0,0.0,30.0,39.693,1062.275
+30,F2 (through_hole),Chamfer Mill D4,Chamfering,-,3-axis milling,0.178,0.0,30.0,0.0,0.0,30.0,30.178,1092.453
+31,F7 (h_circular_end_blind_slot),End Mill D8 R3,Roughing,-,3-axis milling,2.265,0.035,30.0,120.0,0.0,150.035,152.3,1244.753
+32,F7 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,1.692,0.0,30.0,0.0,0.0,30.0,31.692,1276.446
+33,F7 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,4.531,0.0,0.0,0.0,0.0,0.0,4.531,1280.976
+34,F7 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling,1.692,0.0,0.0,0.0,0.0,0.0,1.692,1282.669
+35,F7 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling,11.327,0.0,0.0,0.0,0.0,0.0,11.327,1293.995

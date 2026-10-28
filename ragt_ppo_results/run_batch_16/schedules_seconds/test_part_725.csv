@@ -1,0 +1,35 @@
+No.,Associate machining feature,Cutting tool,Machining stage,Machining region,Machining method,Cutting time (s),Travel time (s),Tool change time (s),Orientation change time (s),Method change time (s),Non-cutting time (s),Total time (s),Cumulative time (s)
+1,F5 (triangular_blind_step),End Mill D10 R1,Roughing,-,3-axis milling,3.059,0.0,0.0,0.0,0.0,0.0,3.059,3.059
+2,F5 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.678,0.0,30.0,0.0,0.0,30.0,32.678,35.737
+3,F5 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,6.118,0.0,0.0,0.0,0.0,0.0,6.118,41.855
+4,F5 (triangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,2.678,0.0,0.0,0.0,0.0,0.0,2.678,44.533
+5,F5 (triangular_blind_step),End Mill D8 R1,Finishing,Corners,3-axis milling,0.05,0.0,0.0,0.0,0.0,0.0,0.05,44.583
+6,F5 (triangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,15.296,0.0,0.0,0.0,0.0,0.0,15.296,59.879
+7,F4 (triangular_blind_step),End Mill D10 R1,Roughing,-,3-axis milling,1.34,0.175,30.0,120.0,0.0,150.175,151.515,211.394
+8,F4 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,1.852,0.0,30.0,0.0,0.0,30.0,31.852,243.246
+9,F4 (triangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,2.68,0.0,0.0,0.0,0.0,0.0,2.68,245.926
+10,F4 (triangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,1.852,0.0,0.0,0.0,0.0,0.0,1.852,247.778
+11,F4 (triangular_blind_step),End Mill D8 R1,Finishing,Corners,3-axis milling,0.05,0.0,0.0,0.0,0.0,0.0,0.05,247.829
+12,F4 (triangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,6.7,0.0,0.0,0.0,0.0,0.0,6.7,254.529
+13,F1 (rectangular_pocket),End Mill D25 R1,Roughing,-,3-axis milling,5.144,0.104,30.0,0.0,0.0,30.104,35.248,289.776
+14,F1 (rectangular_pocket),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,10.288,0.0,30.0,0.0,0.0,30.0,40.288,330.064
+15,F1 (rectangular_pocket),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.877,0.0,0.0,0.0,0.0,0.0,2.877,332.941
+16,F1 (rectangular_pocket),End Mill D8 R1,Finishing,Sides,3-axis milling,2.877,0.0,0.0,0.0,0.0,0.0,2.877,335.817
+17,F1 (rectangular_pocket),End Mill D8 R1,Finishing,Corners,3-axis milling,0.201,0.0,0.0,0.0,0.0,0.0,0.201,336.018
+18,F1 (rectangular_pocket),End Mill D8 R1,Finishing,Bottom,3-axis milling,25.72,0.0,0.0,0.0,0.0,0.0,25.72,361.738
+19,F3 (6sides_pocket),End Mill D8 R3,Roughing,-,3-axis milling,0.544,0.026,30.0,0.0,0.0,30.026,30.571,392.309
+20,F3 (6sides_pocket),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,1.088,0.0,30.0,0.0,0.0,30.0,31.088,423.397
+21,F3 (6sides_pocket),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,0.871,0.0,0.0,0.0,0.0,0.0,0.871,424.268
+22,F3 (6sides_pocket),End Mill D8 R1,Finishing,Sides,3-axis milling,0.871,0.0,0.0,0.0,0.0,0.0,0.871,425.138
+23,F3 (6sides_pocket),End Mill D8 R1,Finishing,Corners,3-axis milling,0.302,0.0,0.0,0.0,0.0,0.0,0.302,425.44
+24,F3 (6sides_pocket),End Mill D8 R1,Finishing,Bottom,3-axis milling,2.721,0.0,0.0,0.0,0.0,0.0,2.721,428.161
+25,F7 (through_hole),Drill D8,Drilling,-,3-axis milling,1.386,0.055,30.0,0.0,0.0,30.055,31.441,459.601
+26,F7 (through_hole),Reamer D8,Reaming,-,3-axis milling,1.733,0.0,30.0,0.0,0.0,30.0,31.733,491.334
+27,F7 (through_hole),Tap M8,Tapping,-,3-axis milling,13.862,0.0,30.0,0.0,0.0,30.0,43.862,535.196
+28,F6 (circular_through_slot),End Mill D10 R1,Roughing,-,3-axis milling,0.36,0.104,30.0,0.0,0.0,30.104,30.464,565.66
+29,F6 (circular_through_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,0.477,0.0,30.0,0.0,0.0,30.0,30.477,596.137
+30,F6 (circular_through_slot),End Mill D8 R1,Finishing,Sides,3-axis milling,0.477,0.0,0.0,0.0,0.0,0.0,0.477,596.614
+31,F2 (through_hole),Drill D6,Drilling,-,3-axis milling,1.04,0.138,30.0,0.0,0.0,30.138,31.178,627.793
+32,F2 (through_hole),Reamer D6,Reaming,-,3-axis milling,1.3,0.0,30.0,0.0,0.0,30.0,31.3,659.092
+33,F2 (through_hole),Tap M6,Tapping,-,3-axis milling,10.396,0.0,30.0,0.0,0.0,30.0,40.396,699.488
+34,F2 (through_hole),Chamfer Mill D4,Chamfering,-,3-axis milling,0.178,0.0,30.0,0.0,0.0,30.0,30.178,729.666

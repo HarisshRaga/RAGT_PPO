@@ -1,0 +1,34 @@
+No.,Associate machining feature,Cutting tool,Machining stage,Machining region,Machining method,Cutting time (s),Travel time (s),Tool change time (s),Orientation change time (s),Method change time (s),Non-cutting time (s),Total time (s),Cumulative time (s)
+1,F4 (rectangular_blind_step),End Mill D18 R1,Roughing,-,3-axis milling,3.56,0.0,0.0,0.0,0.0,0.0,3.56,3.56
+2,F4 (rectangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.395,0.0,30.0,0.0,0.0,30.0,32.395,35.956
+3,F4 (rectangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,7.121,0.0,0.0,0.0,0.0,0.0,7.121,43.076
+4,F4 (rectangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,2.395,0.0,0.0,0.0,0.0,0.0,2.395,45.472
+5,F4 (rectangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,17.802,0.0,0.0,0.0,0.0,0.0,17.802,63.274
+6,F1 (rectangular_blind_step),End Mill D8 R3,Roughing,-,3-axis milling,4.467,0.106,30.0,120.0,0.0,150.106,154.573,217.847
+7,F1 (rectangular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.722,0.0,30.0,0.0,0.0,30.0,32.722,250.569
+8,F1 (rectangular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,8.934,0.0,0.0,0.0,0.0,0.0,8.934,259.503
+9,F1 (rectangular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,2.722,0.0,0.0,0.0,0.0,0.0,2.722,262.225
+10,F1 (rectangular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,22.335,0.0,0.0,0.0,0.0,0.0,22.335,284.56
+11,F2 (rectangular_blind_slot),End Mill D8 R3,Roughing,-,3-axis milling,4.798,0.09,30.0,0.0,0.0,30.09,34.888,319.448
+12,F2 (rectangular_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,2.786,0.0,30.0,0.0,0.0,30.0,32.786,352.234
+13,F2 (rectangular_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,9.596,0.0,0.0,0.0,0.0,0.0,9.596,361.829
+14,F2 (rectangular_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling,2.786,0.0,0.0,0.0,0.0,0.0,2.786,364.615
+15,F2 (rectangular_blind_slot),End Mill D8 R1,Finishing,Corners,3-axis milling,0.201,0.0,0.0,0.0,0.0,0.0,0.201,364.816
+16,F2 (rectangular_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling,23.989,0.0,0.0,0.0,0.0,0.0,23.989,388.805
+17,F3 (blind_hole),Drill D10,Drilling,-,3-axis milling,1.096,0.093,30.0,0.0,0.0,30.093,31.189,419.994
+18,F3 (blind_hole),Reamer D10,Reaming,-,3-axis milling,1.37,0.0,30.0,0.0,0.0,30.0,31.37,451.364
+19,F3 (blind_hole),Tap M10,Tapping,-,3-axis milling,10.961,0.0,30.0,0.0,0.0,30.0,40.961,492.326
+20,F3 (blind_hole),Chamfer Mill D4,Chamfering,-,3-axis milling,0.296,0.0,30.0,0.0,0.0,30.0,30.296,522.622
+21,F7 (circular_blind_step),End Mill D10 R3,Roughing,-,3-axis milling,1.85,0.13,30.0,120.0,0.0,150.13,151.98,674.602
+22,F7 (circular_blind_step),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,1.251,0.0,30.0,0.0,0.0,30.0,31.251,705.853
+23,F7 (circular_blind_step),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,3.701,0.0,0.0,0.0,0.0,0.0,3.701,709.554
+24,F7 (circular_blind_step),End Mill D8 R1,Finishing,Sides,3-axis milling,1.251,0.0,0.0,0.0,0.0,0.0,1.251,710.805
+25,F7 (circular_blind_step),End Mill D8 R1,Finishing,Bottom,3-axis milling,9.252,0.0,0.0,0.0,0.0,0.0,9.252,720.057
+26,F6 (h_circular_end_blind_slot),End Mill D8 R3,Roughing,-,3-axis milling,2.661,0.067,30.0,0.0,0.0,30.067,32.729,752.785
+27,F6 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Sides,3-axis milling,1.834,0.0,30.0,0.0,0.0,30.0,31.834,784.62
+28,F6 (h_circular_end_blind_slot),End Mill D8 R1,Semi-finishing,Bottom,3-axis milling,5.323,0.0,0.0,0.0,0.0,0.0,5.323,789.943
+29,F6 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Sides,3-axis milling,1.834,0.0,0.0,0.0,0.0,0.0,1.834,791.777
+30,F6 (h_circular_end_blind_slot),End Mill D8 R1,Finishing,Bottom,3-axis milling,13.307,0.0,0.0,0.0,0.0,0.0,13.307,805.084
+31,F5 (blind_hole),Drill D8,Drilling,-,3-axis milling,0.92,0.12,30.0,0.0,0.0,30.12,31.04,836.125
+32,F5 (blind_hole),Reamer D8,Reaming,-,3-axis milling,1.15,0.0,30.0,0.0,0.0,30.0,31.15,867.275
+33,F5 (blind_hole),Tap M8,Tapping,-,3-axis milling,9.203,0.0,30.0,0.0,0.0,30.0,39.203,906.478
